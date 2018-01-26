@@ -1,5 +1,5 @@
 {
-  "name": "generator-landingpage",
+  "name": "generator-landingpages",
   "version": "0.1.0",
   "description": "Yeoman generator for simple landing page",
   "homepage": "",
@@ -78,6 +78,6 @@
       "prettier"
     ]
   },
-  "repository": "https://github.com/zguillez/generator-landingpage",
+  "repository": "https://github.com/zguillez/generator-landingpages",
   "license": "MIT"
 }
