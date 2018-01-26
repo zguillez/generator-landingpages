@@ -4,11 +4,14 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 const fs = require('fs');
 const path = require('path');
-const version = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../') + '/package.json')).version;
+const version = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, '../../') + '/package.json')
+).version;
 module.exports = class extends Generator {
   prompting() {
     this.log(yosay('generator-slimphp ' + chalk.green(`v${version}`)));
-    /*const prompts = [
+    /* X
+    const prompts = [
       {
         type: 'list',
         name: 'apptype',
@@ -18,7 +21,8 @@ module.exports = class extends Generator {
     ];
     return this.prompt(prompts).then(props => {
       this.props = props;
-    });*/
+    });
+    */
   }
 
   writing() {
