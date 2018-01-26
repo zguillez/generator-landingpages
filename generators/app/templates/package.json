@@ -1,0 +1,59 @@
+{
+  "name": "landingpage",
+  "version": "0.1.0",
+  "description": "Base for Langing Page development",
+  "main": "dist/index.html",
+  "repository": "",
+  "author": {
+    "name": "Guillermo de la Iglesia",
+    "email": "mail@zguillez.io",
+    "url": "https://github.com/zguillez"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepare-local": "bin/replace.js",
+    "lint": "eslint bin/*.js src/static/*.js --fix || true",
+    "remote": "bin/remote.js",
+    "sass": "npm-sass src/static/styles.scss > src/static/styles.css",
+    "min": "yarn lint && yarn sass && bin/min.js",
+    "server": "lite-server --baseDir='dist'",
+    "serve": "concurrently 'yarn server' 'npm-watch'",
+    "open": "open http://localhost:3000",
+    "open-remote": "open {site}",
+    "deploy": "yarn min && bin/assets.js && bin/ftp.js && yarn open-remote",
+    "deploy-lite": "yarn min && bin/ftp.js --lite && yarn open-remote",
+    "assets": "bin/assets.js",
+    "build": "bin/build.js"
+  },
+  "watch": {
+    "min": {
+      "patterns": "src/static",
+      "extensions": "js,scss"
+    },
+    "build": {
+      "patterns": "src/views/partials",
+      "extensions": "mustache"
+    }
+  },
+  "devDependencies": {
+    "clean-css": "^4.1.9",
+    "colors": "^1.1.2",
+    "concurrently": "^3.5.1",
+    "easy-ftp": "^0.3.37",
+    "eslint": "^4.16.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-html": "^4.0.1",
+    "lite-server": "^2.3.0",
+    "minimist": "^1.2.0",
+    "mustache": "^2.3.0",
+    "npm-sass": "^2.2.1",
+    "npm-watch": "^0.3.0",
+    "open-cli": "^1.0.5",
+    "remote-exec": "^0.0.3",
+    "replace": "^0.3.0",
+    "shelljs": "^0.7.8",
+    "uglify-js": "3.2.1",
+    "uglify-js-es6": "2.8.9",
+    "z-file": "^0.4.1"
+  }
+}
