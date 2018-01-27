@@ -1,5 +1,7 @@
 # generator-landingpages
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zguillez/generator-landingpages.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/generator-landingpages.svg)](https://badge.fury.io/js/generator-landingpages)
 [![Build Status](http://img.shields.io/travis/zguillez/generator-landingpages.svg)](https://travis-ci.org/zguillez/generator-landingpages)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/zguillez/generator-landingpages.svg)](https://codeclimate.com/github/zguillez/generator-landingpages/maintainability)
