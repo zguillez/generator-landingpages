@@ -1,8 +1,10 @@
 {
   "name": "generator-landingpages",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Yeoman generator for simple landing page",
-  "homepage": "",
+  "license": "MIT",
+  "main": "generators/index.js",
+  "repository": "https://github.com/zguillez/generator-landingpages",
   "author": {
     "name": "Guillermo de la Iglesia",
     "email": "mail@zguillez.io",
@@ -11,7 +13,6 @@
   "files": [
     "generators"
   ],
-  "main": "generators/index.js",
   "keywords": [
     "web",
     "landing",
@@ -20,64 +21,52 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "yeoman-test": "^1.7.0",
-    "yeoman-assert": "^3.1.0",
-    "nsp": "^3.1.0",
-    "eslint": "^4.16.0",
-    "prettier": "^1.10.2",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.5.0",
-    "eslint-config-xo": "^0.19.0",
-    "jest": "^22.1.4"
+    "chalk": "^2.4.1",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.1.0",
+    "eslint-config-xo-space": "^0.19.0",
+    "jest": "^23.3.0",
+    "jest-cli": "^23.3.0",
+    "nsp": "^3.2.1",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-generator": "^3.0.0",
+    "yeoman-test": "^1.8.0",
+    "yosay": "^2.0.2"
   },
   "dependencies": {
-    "yeoman-generator": "^2.0.2",
-    "chalk": "^2.3.0",
-    "yosay": "^2.0.1"
+    "clean-css": "^4.1.11",
+    "colors": "^1.3.0",
+    "concurrently": "^3.6.0",
+    "easy-ftp": "^0.3.44",
+    "eslint": "^5.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-html": "^4.0.5",
+    "light-server": "^2.5.1",
+    "minimist": "^1.2.0",
+    "mustache": "^2.3.0",
+    "npm-sass": "^2.3.0",
+    "npm-watch": "^0.3.0",
+    "opn-cli": "^3.1.0",
+    "remote-exec": "^0.0.3",
+    "replace": "^1.0.0",
+    "shelljs": "^0.8.2",
+    "uglify-js": "^3.4.4",
+    "uglify-js-es6": "^2.8.9",
+    "z-file": "^0.4.1"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "scripts": {
     "prepublish": "nsp check",
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
+    "pretest": "eslint . --fix",
     "test": "jest"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
+    "extends": "xo-space",
     "env": {
       "jest": true,
       "node": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
-    "plugins": [
-      "prettier"
-    ]
-  },
-  "repository": "https://github.com/zguillez/generator-landingpages",
-  "license": "MIT"
+    }
+  }
 }

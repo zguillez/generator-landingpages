@@ -1,12 +1,9 @@
 # generator-landingpages
 
 [![npm version](https://badge.fury.io/js/generator-landingpages.svg)](https://badge.fury.io/js/generator-landingpages)
-[![Build Status](http://img.shields.io/travis/zguillez/generator-landingpages.svg)](https://travis-ci.org/zguillez/generator-landingpages)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/zguillez/generator-landingpages.svg)](https://codeclimate.com/github/zguillez/generator-landingpages/maintainability)
-[![Dependency Status](https://gemnasium.com/zguillez/generator-landingpages.svg)](https://gemnasium.com/zguillez/generator-landingpages)
+[![Build Status](https://travis-ci.org/zguillez/generator-landingpages.svg?branch=master)](https://travis-ci.org/zguillez/generator-landingpages)
 [![Installs](https://img.shields.io/npm/dt/generator-landingpages.svg)](https://coveralls.io/r/zguillez/generator-landingpages)
-![](https://reposs.herokuapp.com/?path=zguillez/generator-landingpages)
-[![Join the chat at https://gitter.im/zguillez/generator-landingpages](https://badges.gitter.im/zguillez/generator-landingpages.svg)](https://gitter.im/zguillez/generator-landingpages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/zguillez/generator-landingpages.svg)](https://gitter.im/zguillez/generator-landingpages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > [Zguillez](https://zguillez.io) | Guillermo de la Iglesia
 
