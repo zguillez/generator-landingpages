@@ -1,6 +1,6 @@
 {
   "name": "generator-landingpages",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "Yeoman generator for simple landing page",
   "license": "MIT",
   "main": "generators/index.js",

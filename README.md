@@ -105,8 +105,12 @@ Contributors are welcome, please fork and send pull requests! If you have any id
 Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Open Source projects used within this project retain their original licenses.
 
 # Changelog
+### v1.0.0 (July 13, 2018)
+- Add prompt app type (static/form)
+- Add bin tools
+
 ### v0.1.0 (January 26, 2018)
-Initial landing skeleton
+- Initial landing skeleton
 
 Features:
 
