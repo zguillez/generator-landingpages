@@ -19,9 +19,9 @@
     "server": "light-server -b localhost -p 3000 --serve dist",
     "serve": "concurrently 'yarn server' 'npm-watch'",
     "open": "opn http://localhost:3000",
-    "open-remote": "opn {site}",
-    "deploy": "yarn min && bin/assets.js && bin/ftp.js && yarn open-remote",
-    "deploy-lite": "yarn min && bin/ftp.js --lite && yarn open-remote",
+    "open:remote": "opn {site}",
+    "deploy": "bin/version.js --minor && yarn min && bin/assets.js && bin/ftp.js && yarn open:remote",
+    "deploy:lite": "yarn min && bin/ftp.js --lite && yarn open:remote",
     "assets": "bin/assets.js",
     "build": "bin/build.js"
   },
