@@ -6,7 +6,7 @@ describe('generator-landingpages:app', () => {
   beforeAll(() => {
     return helpers
       .run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true});
+      .withPrompts({apptype: 'Static landingpage'});
   });
 
   it('creates files', () => {

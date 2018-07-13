@@ -4,15 +4,15 @@ let hello = 'test ok!!';
 
 console.log(hello);
 
-const formSubmit = (e) => {
+const formSubmit = e => {
   e.preventDefault();
   console.log('formSubmit');
 
   axios.get('/user?ID=12345')
-    .then((response) => {
+    .then(response => {
       console.log(response);
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
     });
 };
