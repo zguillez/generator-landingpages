@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: "off" */
+/* eslint no-unused-vars: "off", no-undef: "off" */
 
 let hello = 'test ok!!';
 
