@@ -16,3 +16,8 @@ const formSubmit = e => {
       console.log(error);
     });
 };
+
+window.module = window.module || {};
+module.exports = {
+  hello: hello,
+};
