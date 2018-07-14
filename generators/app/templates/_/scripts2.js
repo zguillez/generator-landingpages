@@ -19,5 +19,5 @@ const formSubmit = e => {
 
 window.module = window.module || {};
 module.exports = {
-  hello: hello,
+  hello: hello
 };

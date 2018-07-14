@@ -45,7 +45,10 @@
     "yeoman-test": "^1.8.0"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "globals": {
+      "window": true
+    }
   },
   "scripts": {
     "prepublish": "nsp check",
