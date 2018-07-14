@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off", no-undef: "off" */
+
 let hello = 'test ok!';
 
 console.log(hello);
