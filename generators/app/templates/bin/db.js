@@ -32,7 +32,7 @@ const queriesExecute = (q, index = 0) => {
   new Promise((resolve, reject) => {
     console.log(`${queries[index]}`.yellow);
     connection.query(queries[index], (err, row) => {
-      if (err) {
+      if(err) {
         reject(err);
       } else {
         console.log(`done!`.green);
@@ -41,8 +41,8 @@ const queriesExecute = (q, index = 0) => {
     });
   })
     .then(data => {
-      if (index < queries.length - 1) {
-        index++;
+      if(index < queries.length - 1) {
+        index ++;
         queryHelper(queries, index, {id: data.insertId});
         queriesExecute(queries, index);
       } else {
@@ -59,7 +59,7 @@ const queryExecute = q => {
     new Promise((resolve, reject) => {
       console.log(`${q}`.yellow);
       connection.query(q, (err, row) => {
-        if (err) {
+        if(err) {
           reject(err);
         } else {
           console.log(`done!`.green);

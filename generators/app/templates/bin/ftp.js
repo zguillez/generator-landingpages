@@ -10,24 +10,25 @@ const ftp = new EasyFtp();
 // -----------------------------------
 ftp.connect(config.ftp);
 let files = [];
-if (argv.lite) {
+if(argv.lite) {
   files = [
     `${config.ftp.local}.htaccess`, `${config.ftp.local}index.php`, `${config.ftp.local}inc`
   ];
 } else {
   files = [
-    `${config.ftp.local}.htaccess`, `${config.ftp.local}index.php`, `${config.ftp.local}inc`, `${config.ftp.local}static` // , `${config.ftp.local}vendor`, `${config.ftp.local}logs`
+    `${config.ftp.local}.htaccess`, `${config.ftp.local}index.php`, `${config.ftp.local}inc`,
+    `${config.ftp.local}static` // , `${config.ftp.local}vendor`, `${config.ftp.local}logs`
   ];
 }
 ftp.upload(files, config.ftp.remote, err => {
-  if (err) {
+  if(err) {
     console.log(`${err}\n`.red);
-  } else if (argv.lite) {
+  } else if(argv.lite) {
     files = [
       `${config.ftp.local}static/styles.min.css`, `${config.ftp.local}static/scripts.min.js`
     ];
     ftp.upload(files, `${config.ftp.remote}static/`, err => {
-      if (err) {
+      if(err) {
         console.log(`${err}\n`.red);
       } else {
         console.log(`=> Done!\n`.green);
