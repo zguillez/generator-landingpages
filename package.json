@@ -36,7 +36,7 @@
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-xo-space": "^0.20.0",
-    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "nsp": "^3.2.1",
