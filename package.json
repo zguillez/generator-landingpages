@@ -32,7 +32,7 @@
     "yosay": "^2.0.2"
   },
   "devDependencies": {
-    "coveralls": "^3.0.2",
+    "coveralls": "^3.0.3",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-xo-space": "^0.20.0",
