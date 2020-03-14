@@ -16,15 +16,17 @@ const options = {
 let connection;
 // -----------------------------------
 const queryError = (err, query) => {
-  console.log(`Error while performing Query:`.red);
+  console.log('Error while performing Query:'.red);
   console.log(`${query}`.yellow);
   console.log(`${err}`.red);
   connection.end();
 };
+
 const queryHelper = (query, index, data) => {
   query[index] = query[index].replace('%LEAD_ID%', data.id);
   return query;
 };
+
 // -----------------------------------
 const queriesExecute = (q, index = 0) => {
   connection = mysql.createConnection(options);
@@ -32,17 +34,17 @@ const queriesExecute = (q, index = 0) => {
   new Promise((resolve, reject) => {
     console.log(`${queries[index]}`.yellow);
     connection.query(queries[index], (err, row) => {
-      if(err) {
+      if (err) {
         reject(err);
       } else {
-        console.log(`done!`.green);
+        console.log('done!'.green);
         resolve(row);
       }
     });
   })
     .then(data => {
-      if(index < queries.length - 1) {
-        index ++;
+      if (index < queries.length - 1) {
+        index++;
         queryHelper(queries, index, {id: data.insertId});
         queriesExecute(queries, index);
       } else {
@@ -53,16 +55,17 @@ const queriesExecute = (q, index = 0) => {
       queryError(err, queries[index]);
     });
 };
+
 const queryExecute = q => {
   connection = mysql.createConnection(options);
   return new Promise((resolve, reject) => {
     new Promise((resolve, reject) => {
       console.log(`${q}`.yellow);
       connection.query(q, (err, row) => {
-        if(err) {
+        if (err) {
           reject(err);
         } else {
-          console.log(`done!`.green);
+          console.log('done!'.green);
           // Console.log(row);
           resolve(row);
         }
@@ -77,6 +80,7 @@ const queryExecute = q => {
       });
   });
 };
+
 // -----------------------------------
 exports.query = queryExecute;
 exports.queries = queriesExecute;

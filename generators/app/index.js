@@ -30,6 +30,7 @@ module.exports = class extends Generator {
     } else if (this.props.apptype === 'Landingpage with form') {
       apptype = 2;
     }
+
     this.fs.copy(this.templatePath('__tests__'), this.destinationPath('__tests__'));
     this.fs.copy(this.templatePath('bin'), this.destinationPath('bin'));
     this.fs.copy(this.templatePath('dist'), this.destinationPath('dist'));
@@ -48,7 +49,7 @@ module.exports = class extends Generator {
       npm: false,
       yarn: true,
       callback: () => {
-        console.log(chalk.green(`=> Everything is ready!`));
+        console.log(chalk.green('=> Everything is ready!'));
       }
     });
   }

@@ -11,17 +11,18 @@ const options = {
   password: config.ssh.password
 };
 // -----------------------------------
-if(argv.i) {
+if (argv.i) {
   let command = `cd ${config.ssh.path} && ${argv.i}`;
   console.log(`=> Command: ${command}`.cyan);
   rexec(config.ssh.host, command, options, err => {
-    if(err) {
+    if (err) {
       console.log(`${err}`.red);
     } else {
       console.log(`${command} => Remote exec done!`.cyan);
     }
-    console.log(`=> Done!`.green);
+
+    console.log('=> Done!'.green);
   });
 } else {
-  console.log(`error: null -i [script]\n`.red);
+  console.log('error: null -i [script]\n'.red);
 }

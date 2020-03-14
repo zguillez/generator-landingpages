@@ -4,5 +4,5 @@ const colors = require('colors');
 const fs = require('fs-extra');
 // -----------------------------------
 fs.copy('node_modules/axios/dist/axios.min.js', 'dist/lib/axios.min.js')
-  .then(() => console.log(`=> dist/lib/axios.min.js copied!\n`.green))
+  .then(() => console.log('=> dist/lib/axios.min.js copied!\n'.green))
   .catch(err => console.log(`ERROR: ${err}`.red));

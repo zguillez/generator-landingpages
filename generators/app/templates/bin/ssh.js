@@ -9,4 +9,4 @@ const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../.sshconfig
 let command = `cd dist && sshpass -p ${config.ssh.password} scp -r * ${config.ssh.username}@${config.ssh.host}:${config.ssh.path}/${config.ssh.folder}`;
 console.log(`=> Command: ${command}`.cyan);
 shell.exec(command);
-console.log(`=> Done!\n`.green);
+console.log('=> Done!\n'.green);

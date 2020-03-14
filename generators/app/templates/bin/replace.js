@@ -12,4 +12,4 @@ replace({
   paths: ['package.json'],
   silent: true
 });
-console.log(`=> Done!\n`.green);
+console.log('=> Done!\n'.green);
